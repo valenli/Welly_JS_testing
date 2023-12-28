@@ -5,13 +5,22 @@ function ConditionalRendering({ isLoggedIn }) {
   // 實作你的條件渲染
 } 
 */
-import React from 'react'
-function ConditionalRendering({isLoggedIn}) {
+function ConditionalRendering({ isLoggedIn }) {
   return (
     <div>
       <h1>4. 條件渲染</h1>
-      {isLoggedIn ? (<p>歡迎登入</p>) : (<p>請登入</p>)}
+      {isLoggedIn ? (
+        <div>
+          <p>歡迎登入</p>
+          <button>登出</button>
+        </div>
+      ) : (
+        <div>
+          <p>請登入</p>
+          <button>登入</button>
+        </div>
+      )}
     </div>
-  )
+  );
 }
-export default ConditionalRendering
+export default ConditionalRendering;
